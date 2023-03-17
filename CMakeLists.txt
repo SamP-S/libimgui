@@ -31,6 +31,7 @@ add_library(imgui STATIC
 target_include_directories(imgui PUBLIC "./")
 
 find_package(OpenGL REQUIRED)
+target_include_directories(imgui PUBLIC ${OPENGL_INCLUDE_DIRS})
 target_link_libraries(imgui PUBLIC ${OPENGL_LIBRARIES})
 message(STATUS "OpenGL included at ${OPENGL_INCLUDE_DIRS}")
 message(STATUS "OpenGL libraries are ${OPENGL_LIBRARIES}")
