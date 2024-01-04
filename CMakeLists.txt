@@ -29,6 +29,7 @@ add_library(imgui STATIC
     "./backends/imgui_impl_${IMGUI_RENDERER}.cpp"
 )
 target_include_directories(imgui PUBLIC "./")
+target_include_directories(imgui PUBLIC "./backends")
 
 find_package(OpenGL REQUIRED)
 target_include_directories(imgui PUBLIC ${OPENGL_INCLUDE_DIRS})
